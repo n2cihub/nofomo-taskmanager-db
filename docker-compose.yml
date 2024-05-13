@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  db:
+    image: "mysql:8.0"
+    restart: always
+    environment:
+      MYSQL_DATABASE: taskmanager
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+    - '3306:3306'
+    networks:
+      - internnet
+
+networks:
+  internnet:
+
